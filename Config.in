@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_DART_MINI_PATH/package/octave/Config.in"
+

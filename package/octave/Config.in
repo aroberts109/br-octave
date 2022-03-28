@@ -1,0 +1,13 @@
+config BR2_PACKAGE_OCTAVE
+	bool "Octave"
+	depends on BR2_PACKAGE_FFTW
+	select BR2_PACKAGE_OPENBLAS
+	select BR2_PACKAKE_LAPACK
+	select BR2_PACKAGE_PCRE
+	select BR2_PACKAGE_READLINE
+	select BR2_PACKAGE_LIBCURL_CURL
+
+	help
+	  GNU Octave
+
+	  https://wiki.octave.org/Building
