@@ -1,0 +1,17 @@
+diff --git a/configure.ac b/configure.ac
+index 31e656fa20..55427590a6 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -760,6 +760,12 @@ if test $ax_blas_ok = no || test $ax_lapack_ok = no; then
+   AC_MSG_ERROR([BLAS and LAPACK libraries are required])
+ fi
+ 
++if ac_fn_f77_try_run "$LINENO"; then :
++  ax_blas_integer_size=8
++else
++  ax_blas_integer_size=4
++fi
++
+ case $ax_blas_integer_size in
+   4)
+     HAVE_64_BIT_BLAS=no
