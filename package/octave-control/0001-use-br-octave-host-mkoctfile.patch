@@ -9,26 +9,4 @@ diff -r 954715a89818 src/Makefile
  
  ifndef LAPACK_LIBS
  LAPACK_LIBS := $(shell $(MKOCTFILE) -p LAPACK_LIBS)
-@@ -17,7 +17,8 @@
- 
- PKG_CXXFLAGS := -Wall -Wno-deprecated-declarations $(PKG_CXXFLAGS_APPEND)
- 
--all: __control_slicot_functions__.oct \
-+all: __autoreconf_and_configure__ \
-+     __control_slicot_functions__.oct \
-      __control_helper_functions__.oct
- 
- # TODO: Private oct-files for control package.
-@@ -68,6 +69,12 @@
- __control_helper_functions__.oct: __control_helper_functions__.cc
- 	$(MKOCTFILE) $(PKG_CXXFLAGS) __control_helper_functions__.cc
- 
-+# configure
-+__autoreconf_and_configure__:
-+	autoupdate
-+	autoreconf
-+	./configure --build=$(TARGET_CROSS)
-+
- clean:
- 	$(RM) -r *.o core octave-core *.oct *~ *.f slicot sltmp
- 
+
