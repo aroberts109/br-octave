@@ -20,7 +20,6 @@ endif
 
 $(eval $(autotools-package))
 
-$(info "HOST_DIR:" $(HOST_DIR))
 HOST_OCTAVE_CONF_OPTS = --prefix=$(HOST_DIR)
 
 $(eval $(host-autotools-package))
