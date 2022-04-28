@@ -1,0 +1,24 @@
+diff -r a6787fdb6dd9 Makefile
+--- a/Makefile	Sat Apr 23 07:21:25 2022 -0400
++++ b/Makefile	Wed Apr 27 07:29:19 2022 -0500
+@@ -9,7 +9,7 @@
+ ## notice and this notice are preserved.  This file is offered as-is,
+ ## without any warranty.
+ 
+-MKOCTFILE ?= mkoctfile
++MKOCTFILE ?= $(HOST_DIR)/bin/mkoctfile
+ OCTAVE    ?= octave
+ SED       := sed
+ SHA256SUM := sha256sum
+diff -r a6787fdb6dd9 src/Makefile
+--- a/src/Makefile	Sat Apr 23 07:21:25 2022 -0400
++++ b/src/Makefile	Wed Apr 27 07:29:19 2022 -0500
+@@ -16,7 +16,7 @@
+ # along with this program; see the file COPYING. If not, see
+ # <https://www.gnu.org/licenses/>.
+ 
+-MKOCTFILE ?= mkoctfile
++MKOCTFILE ?= $(HOST_DIR)/bin/mkoctfile
+ SED       ?= sed
+ 
+ PKG_CXXFLAGS := -Wall $(PKG_CXXFLAGS_APPEND)

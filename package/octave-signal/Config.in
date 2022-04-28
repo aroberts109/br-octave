@@ -1,0 +1,10 @@
+config BR2_PACKAGE_OCTAVE_SIGNAL
+	bool "octave signal"
+	depends on BR2_PACKAGE_OCTAVE
+	select BR2_PACKAGE_OCTAVE_CONTROL
+	help
+      Signal processing tools, including filtering, windowing and display functions.
+
+	  https://octave.sourceforge.io/signal/index.html
+
+

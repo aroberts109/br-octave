@@ -1,4 +1,5 @@
 source "$BR2_EXTERNAL_OCTAVE_SUPPORT_PATH/package/octave/Config.in"
 source "$BR2_EXTERNAL_OCTAVE_SUPPORT_PATH/package/octave/Config.host.in"
 source "$BR2_EXTERNAL_OCTAVE_SUPPORT_PATH/package/octave-control/Config.in"
+source "$BR2_EXTERNAL_OCTAVE_SUPPORT_PATH/package/octave-signal/Config.in"
 
