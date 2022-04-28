@@ -33,7 +33,7 @@ define OCTAVE_SIGNAL_INSTALL_STAGING_CMDS
 endef
 
 define OCTAVE_SIGNAL_INSTALL_TARGET_CMDS
-	tar -cvzf $(TARGET_DIR)/usr/share/octave/signal-$(OCTAVE_SIGNAL_VERSION) -C $(STAGING_DIR)/usr/share/octave signal-$(OCTAVE_SIGNAL_VERSION)
+	tar -cvzf $(TARGET_DIR)/usr/share/octave/$(OCTAVE_SIGNAL_SOURCE) -C $(STAGING_DIR)/usr/share/octave signal-$(OCTAVE_SIGNAL_VERSION)
 endef
 
 $(eval $(generic-package))
