@@ -12,6 +12,18 @@ OCTAVE_DEPENDENCIES = \
 		      openblas \
 		      pcre
 
+ifeq ($(BR2_PACKAGE_FFTW_SINGLE),y)
+	OCTAVE_DEPENDENCIES += fftw-single
+endif
+
+ifeq ($(BR2_PACKAGE_FFTW_DOUBLE),y)
+	OCTAVE_DEPENDENCIES += fftw-double
+endif
+
+ifeq ($(BR2_PACKAGE_FFTW),n)
+	OCTAVE_CONF_OPTS += --without-fftw3 --without-fftw3f
+endif
+
 ifeq ($(BR2_PACKAGE_READLINE),y)
 	OCTAVE_DEPENDENCIES += readline
 else
