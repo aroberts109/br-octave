@@ -1,0 +1,48 @@
+diff -r 8e2b85b02196 src/configure.ac
+--- a/src/configure.ac	Sun Jan 16 15:17:03 2022 +0100
++++ b/src/configure.ac	Sun May 01 08:12:07 2022 -0500
+@@ -45,7 +45,7 @@
+ ## Simple symbol alternatives of different Octave versions.
+ OF_OCTAVE_LIST_ALT_SYMS([
+ [dnl
+-  [is_real_type],
++  [isreal],
+   [isreal],
+   [[octave_value ().isreal ();]],
+   [OV_ISREAL],
+@@ -54,7 +54,7 @@
+ ],
+ 
+ [dnl
+-  [is_cell],
++  [iscell],
+   [iscell],
+   [[octave_value ().iscell ();]],
+   [OV_ISCELL],
+@@ -63,7 +63,7 @@
+ ],
+ 
+ [dnl
+-  [is_object],
++  [isobject],
+   [isobject],
+   [[octave_value ().isobject ();]],
+   [OV_ISOBJECT],
+@@ -72,7 +72,7 @@
+ ],
+ 
+ [dnl
+-  [is_complex_type],
++  [iscomplex],
+   [iscomplex],
+   [[octave_value ().iscomplex ();]],
+   [OV_ISCOMPLEX],
+@@ -81,7 +81,7 @@
+ ],
+ 
+ [dnl
+-  [is_numeric_type],
++  [isnumeric],
+   [isnumeric],
+   [[octave_value ().isnumeric ();]],
+   [OV_ISNUMERIC],
